@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.MainController">
+
+    <children>
+
+        <TextField fx:id="nameField" promptText="Name"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <TextField fx:id="phoneField" promptText="Phone"/>
+        <TextField fx:id="addressField" promptText="Address"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+
+        <HBox spacing="10">
+            <children>
+                <Button text="Upload Image" onAction="#handleUploadImage"/>
+                <Button text="Add" onAction="#handleAdd"/>
+                <Button text="Update" onAction="#handleUpdate"/>
+                <Button text="Delete" onAction="#handleDelete"/>
+                <Button text="Clear" onAction="#handleClear"/>
+            </children>
+        </HBox>
+
+        <TableView fx:id="personTable" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+                <TableColumn fx:id="emailColumn" text="Email"/>
+                <TableColumn fx:id="phoneColumn" text="Phone"/>
+                <TableColumn fx:id="addressColumn" text="Address"/>
+            </columns>
+        </TableView>
+
+    </children>
+</VBox>
